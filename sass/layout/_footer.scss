@@ -1,3 +1,95 @@
-@use '../abstracts/' as abst;
-@use '../components/' as comps;
+@use "../abstracts/" as ab;
+@use "../components/" as comps;
 
+//footer
+footer {
+  background-color: ab.$azul;
+  padding: 1rem;
+
+  div.footer_container {
+
+    section.contacto {
+      picture {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        img {
+          margin: 3rem;
+          max-width: 50%;
+        }
+      }
+
+      p {
+        color: ab.$blanco;
+        text-align: center;
+        margin-bottom: 3rem;
+        font-family: "Libre Franklin", sans-serif;
+        font-weight: 500;
+        span {
+          text-decoration: underline;
+          text-underline-offset: 5px;
+          text-decoration-color: ab.$blanco;
+          font-style: italic;
+          font-weight: 200;
+        }
+      }
+
+      div.rrss_container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 3rem;
+        a {
+          text-decoration: none;
+          i {
+            font-size: 2rem;
+            color: ab.$blanco;
+            &:hover {
+              color: ab.$celeste;
+            }
+          }
+        }
+      }
+    }
+
+    section.paginas{
+        margin-bottom: 3rem;
+        p{
+            color: ab.$blanco;
+            text-align: center;
+            font-family: "Libre Franklin", sans-serif;
+            margin-bottom: 0.5rem;
+        }
+        ul{
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            li a{
+                color: ab.$celeste;
+                font-family: "Libre Franklin", sans-serif;
+                &:hover{
+                    color: ab.$naranja
+                }
+
+            }
+        }
+    }
+
+    p.rights{
+        color: ab.$blanco;
+        font-size: 0.65rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        font-family: "Libre Franklin", sans-serif;
+        color: ab.$negro;
+    }
+
+    p.a_stack{
+        font-family: "Libre Franklin", sans-serif;
+        margin-bottom: 0rem;
+        color: ab.$celeste;
+        font-size: 0.6rem;
+        text-align: center;
+    }
+  }
+}
