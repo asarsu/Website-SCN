@@ -23,3 +23,37 @@
 //     } 
     
 // }
+
+@mixin boton_1{
+    display: inline-block;
+    background-color: ab.$celeste;
+    padding: 1rem 4rem;
+    font-family: "Libre Franklin", sans-serif;
+    color: ab.$negro;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    &:hover{
+        background-color: ab.$negro;
+        color: ab.$blanco;
+    }
+    
+}
+
+@mixin boton_2{
+    display: inline-block;
+    background-color: ab.$naranja;
+    padding: 1rem 4rem;
+    font-family: "Libre Franklin", sans-serif;
+    color: ab.$blanco;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    &:hover{
+        background-color: ab.$negro;
+        color: ab.$blanco;
+    }
+    
+}
