@@ -20,11 +20,15 @@ body {
     }
    
     section.presentacion{
-     padding: 1rem;
-    
+      padding: 1rem;
+      
+      .mySwiper{
+        padding-bottom: 1rem;
+        overflow: visible;
+      }
+      
       article._presen{
         padding: 1rem;
-        margin-bottom: 1rem;
         border-radius: 10px;
         box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
         -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);

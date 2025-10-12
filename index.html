@@ -1,275 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> <!-- bootstrap-icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- bootstrap-icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>SBNCBBA</title>
   </head>
 
   <body>
-   <header>
-    <div class="header_container">
-      <div class="logo_container">
-        <img src="/img/soc-logo-naranja-removebg.png" alt="isotipo_SBN">
-        <h1>Sociedad Cochabambina <br>de Neurocirugía</h1>
-      </div>
+    <header>
+      <div class="header_container">
+        <div class="logo_container">
+          <img src="/img/soc-logo-naranja-removebg.png" alt="isotipo_SBN" />
+          <h1>Sociedad Cochabambina <br />de Neurocirugía</h1>
+        </div>
 
-      <button class="menu_button" id="menu_button">
+        <button class="menu_button" id="menu_button">
           <i class="bi bi-list"></i>
-      </button>
-      
-      <nav class="menu" id="menu">
-        <button class="close_button" id="close_button">
-            <i class="bi bi-x-square"></i>
         </button>
 
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Asociados</a></li>
-          <li><a href="#">Actividades</a></li>
-          <li><a href="#">Recursos</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
+        <nav class="menu" id="menu">
+          <button class="close_button" id="close_button">
+            <i class="bi bi-x-square"></i>
+          </button>
 
-    <div class="hero_container">
-      <img src="/img/isotipo_b-removebg-preview.png" alt="">
-      <div class="hero_text">
-        <p class="sociedad">Sociedad Cochabambina de</p>
-        <h1>Neurocirugía</h1>        
-      </div>
-      
-    </div>
-
-   </header>
-
-   <main>
-    <div class="main_container">
-      
-      <section class="presentacion">
-
-        <article class="quienes _presen">
-          <div class="presentacion_titulo">
-            <img src="img/cruz (Copiar).png" alt="">            
-            <h2>Quíenes Somos</h2>
-          </div>
-          
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, adipisci! Placeat aut provident repellendus laborum, ipsa obcaecati dolore deserunt saepe ullam laudantium vitae recusandae id officia odit eius sit aliquam?</p>         
-        </article>
-
-        <article class="mision _presen">
-          <div class="presentacion_titulo">
-            <img src="img/mision_icon.png" alt="">            
-            <h2>Misión</h2>
-          </div>            
-          
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, adipisci! Placeat aut provident repellendus laborum, ipsa obcaecati dolore deserunt saepe ullam laudantium vitae recusandae id officia odit eius sit aliquam?</p>
-        </article>
-
-        <article class="vision _presen">          
-          <div class="presentacion_titulo">
-            <img src="img/vision_icon.png" alt="">            
-            <h2>Visión</h2>
-          </div>
-          
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, adipisci! Placeat aut provident repellendus laborum, ipsa obcaecati dolore deserunt saepe ullam laudantium vitae recusandae id officia odit eius sit aliquam?</p>
-        </article>
-                         
-      </section>
-
-      <section class="actividades">
-
-        <div class="eventos_futuros">
-          <h3>Proximos Eventos</h3>
-          
-          <article class="evento">
-            <img src="/img/fondo_eventos-prox.jpg" alt="">
-            <p class="fecha_cuadro fecha_proxima">29 <br><span>OCT</span></p>
-            <div class="eventos_datos">
-              <h4>Asamblea Ordinaria Gestion 2025</h4>
-              <p><i class="bi bi-calendar-event"></i>12 de diciembre de 2025</p>
-            </div>
-          </article>
-
-          <article class="evento">
-            <img src="/img/fondo_eventos-prox.jpg" alt="">
-            <p class="fecha_cuadro fecha_proxima">05 <br><span>FEB</span></p>
-            <div class="eventos_datos">
-              <h4>1er Congreso Nacional de Neurocirugia Pediátrica</h4>
-              <p><i class="bi bi-calendar-event"></i>05 de febrero de 2026</p>
-            </div>
-          </article>
-
-          <a href="#">Ver Más</a>
-        </div>
-        
-        <div class="eventos_pasados">
-          <h3 id="eventos_pasados_title">Eventos Pasados</h3>
-          
-          <article class="evento">
-            <img src="/img/fondo_eventos_pasados-nr.jpg" alt="">
-            <p class="fecha_cuadro fecha_pasada">14 <br><span>MAY</span></p>
-            <div class="eventos_datos">
-              <h4>Jornadas de atencion Gratuita para adultos mayores 2024</h4>
-              <p><i class="bi bi-calendar-event"></i>14 de mayo de 2024</p>
-            </div>
-          </article>
-
-          <article class="evento">
-            <img src="/img/fondo_eventos_pasados-nr.jpg" alt="">
-            <p class="fecha_cuadro fecha_pasada">20 <br><span>DIC</span></p>
-            <div class="eventos_datos">
-              <h4>Cena de confraternizacion SBNCBBA</h4>
-              <p><i class="bi bi-calendar-event"></i>05 de febrero de 2024</p>
-            </div>
-          </article>
-
-          <a id="boton_2" href="#">Ver Más</a>
-            
-        </div>
-                                    
-      </section>
-
-      <section class="directorio">
-        <h2>Directorio Gestión 2025</h2>
-
-        <div class="miembros">
-
-          <article class="miembro_container">
-            <img src="https://placehold.co/300?text=Foto\nPresidente" alt="">
-            <div class="miembros_text">
-              <h3>Dr. Diego Fernando León</h3>
-              <p>Presidente</p>
-            </div>
-          </article>
-
-          <article class="miembro_container">
-            <img src="https://placehold.co/300?text=Foto\nVicepresidente" alt="">
-            <div class="miembros_text">
-              <h3>Dr. Armando Casas Del Bosque</h3>
-              <p>Vicepresidente</p>
-            </div>
-          </article>
-
-          <article class="miembro_container">
-            <img src="https://placehold.co/300?text=Foto\nSecretario" alt="">
-            <div class="miembros_text">
-              <h3>Dr. Esteban Quito Gonzales</h3>
-              <p>Secrtetario</p>
-            </div>
-          </article>
-
-          <article class="miembro_container">
-            <img src="https://placehold.co/300?text=Foto\nTesorero" alt="">
-            <div class="miembros_text">
-              <h3>Dr. Abharam Tirado Rico</h3>
-              <p>Tesorero</p>
-            </div>
-          </article>
-
-          <article class="miembro_container">
-            <img src="https://placehold.co/300?text=Foto\nVocal" alt="">
-            <div class="miembros_text">
-              <h3>Dr. Susana Oria Huertas</h3>
-              <p>Vocal</p>
-            </div>
-          </article>
-        </div>
-                
-      </section>
-      
-      <section class="recursos">
-
-        <div class="recursos_container">
-          <a href="#">
-            <i class="bi bi-person-badge"></i>
-            <h4>Comités</h4>
-            <p>Conoce a los miembros y funciones de cada comité de la SCN</p>
-          </a>
-        </div>
-
-        <div class="recursos_container">
-          <a href="#">
-            <i class="bi bi-folder2-open"></i>
-            <h4>Estatutos y Reglamentos</h4>
-            <p>Conoce nuestros estatutos y reglamentos</p>
-          </a>          
-        </div>
-        
-        <div class="recursos_container">
-          <a href="#">
-            <i class="bi bi-tags-fill"></i>
-            <h4>Formar Parte de la Sociedad</h4>
-            <p>Forma parte de la SCN y disfruta de los beneficios de ser miembro activo</p>
-          </a>          
-        </div>
-
-        <div class="recursos_container">
-          <a href="#">
-            <i class="bi bi-zoom-in"></i>
-            <h4>Lista de miembros</h4>
-            <p>Conoce a todos nuestros miembros y sus especialidades</p>
-          </a>          
-        </div>
-      </section>
-
-      <section class="sponsors">
-        <p>Clinicas Asociadas:</p>
-
-        <div class="sponsors_container">
-          <picture>
-            <img src="img/sponsors_logos/sponsor-1.png" alt="">
-          </picture>
-
-          <picture>
-            <img src="img/sponsors_logos/sponsor-2.png" alt="">
-          </picture>
-
-          <picture>
-            <img src="img/sponsors_logos/sponsor-3.png" alt="">
-          </picture>
-
-          <picture>
-            <img src="img/sponsors_logos/sponsor-4.png" alt="">
-          </picture>
-        </div>
-  
-      </section>
-        
-    </div>
-   </main>
-
-   <footer>
-    <div class="footer_container">
-
-      <section class="contacto">
-        <picture>
-          <img src="img/soc-logo-naranja-removebg.png" alt="logo_cbnc">
-        </picture>
-        
-        <p>email: <br><span>contacto@sociedadneurologica.cbb.org</span></p>
-        <p> telefono: <br><span>+591 74539874</span></p>
-        <div class="rrss_container">
-          <a href="#">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="#">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="#">
-            <i class="bi bi-twitter-x"></i>
-          </a>
-          <a href="#">
-            <i class="bi bi-linkedin"></i>
-          </a>
-        </div>
-      </section>
-     
-      <section class="paginas">
-        <p>Páginas</p>
           <ul>
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Nosotros</a></li>
@@ -278,18 +40,312 @@
             <li><a href="#">Recursos</a></li>
             <li><a href="#">Contacto</a></li>
           </ul>
-      </section>
+        </nav>
+      </div>
 
-      <p class="rights">&copy; Copy right 2025 - Sociedad Cochabambina de Neurocirugía</p>
-      <p class="a_stack">Design: A-Stack Dev  <br>(create/conect/accelerate)</p>
+      <div class="hero_container">
+        <img src="/img/isotipo_b-removebg-preview.png" alt="" />
+        <div class="hero_text">
+          <p class="sociedad">Sociedad Cochabambina de</p>
+          <h1>Neurocirugía</h1>
+        </div>
+      </div>
+    </header>
 
-    </div>
-   </footer>
-  
+    <main>
+      <div class="main_container">
+        <section class="presentacion">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="quienes _presen">
+                  <div class="presentacion_titulo">
+                    <img src="img/cruz (Copiar).png" alt="" />
+                    <h2>Quíenes Somos</h2>
+                  </div>
 
-  
-    
-  <script type="module" src="./main.js"></script>
-    
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Est, adipisci! Placeat aut provident repellendus laborum,
+                    ipsa obcaecati dolore deserunt saepe ullam laudantium vitae
+                    recusandae id officia odit eius sit aliquam?
+                  </p>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="mision _presen">
+                  <div class="presentacion_titulo">
+                    <img src="img/mision_icon.png" alt="" />
+                    <h2>Misión</h2>
+                  </div>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Est, adipisci! Placeat aut provident repellendus laborum,
+                    ipsa obcaecati dolore deserunt saepe ullam laudantium vitae
+                    recusandae id officia odit eius sit aliquam?
+                  </p>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="vision _presen">
+                  <div class="presentacion_titulo">
+                    <img src="img/vision_icon.png" alt="" />
+                    <h2>Visión</h2>
+                  </div>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Est, adipisci! Placeat aut provident repellendus laborum,
+                    ipsa obcaecati dolore deserunt saepe ullam laudantium vitae
+                    recusandae id officia odit eius sit aliquam?
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </section>
+
+        <section class="actividades">
+          <div class="eventos_futuros">
+            <h3>Proximos Eventos</h3>
+
+            <article class="evento">
+              <img src="/img/fondo_eventos-prox.jpg" alt="" />
+              <p class="fecha_cuadro fecha_proxima">
+                29 <br /><span>OCT</span>
+              </p>
+              <div class="eventos_datos">
+                <h4>Asamblea Ordinaria Gestion 2025</h4>
+                <p>
+                  <i class="bi bi-calendar-event"></i>12 de diciembre de 2025
+                </p>
+              </div>
+            </article>
+
+            <article class="evento">
+              <img src="/img/fondo_eventos-prox.jpg" alt="" />
+              <p class="fecha_cuadro fecha_proxima">
+                05 <br /><span>FEB</span>
+              </p>
+              <div class="eventos_datos">
+                <h4>1er Congreso Nacional de Neurocirugia Pediátrica</h4>
+                <p><i class="bi bi-calendar-event"></i>05 de febrero de 2026</p>
+              </div>
+            </article>
+
+            <a href="#">Ver Más</a>
+          </div>
+
+          <div class="eventos_pasados">
+            <h3 id="eventos_pasados_title">Eventos Pasados</h3>
+
+            <article class="evento">
+              <img src="/img/fondo_eventos_pasados-nr.jpg" alt="" />
+              <p class="fecha_cuadro fecha_pasada">14 <br /><span>MAY</span></p>
+              <div class="eventos_datos">
+                <h4>Jornadas de atencion Gratuita para adultos mayores 2024</h4>
+                <p><i class="bi bi-calendar-event"></i>14 de mayo de 2024</p>
+              </div>
+            </article>
+
+            <article class="evento">
+              <img src="/img/fondo_eventos_pasados-nr.jpg" alt="" />
+              <p class="fecha_cuadro fecha_pasada">20 <br /><span>DIC</span></p>
+              <div class="eventos_datos">
+                <h4>Cena de confraternizacion SBNCBBA</h4>
+                <p><i class="bi bi-calendar-event"></i>05 de febrero de 2024</p>
+              </div>
+            </article>
+
+            <a id="boton_2" href="#">Ver Más</a>
+          </div>
+        </section>
+
+        <section class="directorio">
+          <h2>Directorio Gestión 2025</h2>
+
+          <div class="miembros">
+            <article class="miembro_container">
+              <img
+                src="https://placehold.co/300?text=Foto\nPresidente"
+                alt=""
+              />
+              <div class="miembros_text">
+                <h3>Dr. Diego Fernando León</h3>
+                <p>Presidente</p>
+              </div>
+            </article>
+
+            <article class="miembro_container">
+              <img
+                src="https://placehold.co/300?text=Foto\nVicepresidente"
+                alt=""
+              />
+              <div class="miembros_text">
+                <h3>Dr. Armando Casas Del Bosque</h3>
+                <p>Vicepresidente</p>
+              </div>
+            </article>
+
+            <article class="miembro_container">
+              <img
+                src="https://placehold.co/300?text=Foto\nSecretario"
+                alt=""
+              />
+              <div class="miembros_text">
+                <h3>Dr. Esteban Quito Gonzales</h3>
+                <p>Secrtetario</p>
+              </div>
+            </article>
+
+            <article class="miembro_container">
+              <img src="https://placehold.co/300?text=Foto\nTesorero" alt="" />
+              <div class="miembros_text">
+                <h3>Dr. Abharam Tirado Rico</h3>
+                <p>Tesorero</p>
+              </div>
+            </article>
+
+            <article class="miembro_container">
+              <img src="https://placehold.co/300?text=Foto\nVocal" alt="" />
+              <div class="miembros_text">
+                <h3>Dr. Susana Oria Huertas</h3>
+                <p>Vocal</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="recursos">
+          <div class="recursos_container">
+            <a href="#">
+              <i class="bi bi-person-badge"></i>
+              <h4>Comités</h4>
+              <p>Conoce a los miembros y funciones de cada comité de la SCN</p>
+            </a>
+          </div>
+
+          <div class="recursos_container">
+            <a href="#">
+              <i class="bi bi-folder2-open"></i>
+              <h4>Estatutos y Reglamentos</h4>
+              <p>Conoce nuestros estatutos y reglamentos</p>
+            </a>
+          </div>
+
+          <div class="recursos_container">
+            <a href="#">
+              <i class="bi bi-tags-fill"></i>
+              <h4>Formar Parte de la Sociedad</h4>
+              <p>
+                Forma parte de la SCN y disfruta de los beneficios de ser
+                miembro activo
+              </p>
+            </a>
+          </div>
+
+          <div class="recursos_container">
+            <a href="#">
+              <i class="bi bi-zoom-in"></i>
+              <h4>Lista de miembros</h4>
+              <p>Conoce a todos nuestros miembros y sus especialidades</p>
+            </a>
+          </div>
+        </section>
+
+        <section class="sponsors">
+          <p>Clinicas Asociadas:</p>
+
+          <div class="sponsors_container">
+            <picture>
+              <img src="img/sponsors_logos/sponsor-1.png" alt="" />
+            </picture>
+
+            <picture>
+              <img src="img/sponsors_logos/sponsor-2.png" alt="" />
+            </picture>
+
+            <picture>
+              <img src="img/sponsors_logos/sponsor-3.png" alt="" />
+            </picture>
+
+            <picture>
+              <img src="img/sponsors_logos/sponsor-4.png" alt="" />
+            </picture>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer_container">
+        <section class="contacto">
+          <picture>
+            <img src="img/soc-logo-naranja-removebg.png" alt="logo_cbnc" />
+          </picture>
+
+          <p>email: <br /><span>contacto@sociedadneurologica.cbb.org</span></p>
+          <p>telefono: <br /><span>+591 74539874</span></p>
+          <div class="rrss_container">
+            <a href="#">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="#">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </section>
+
+        <section class="paginas">
+          <p>Páginas</p>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Asociados</a></li>
+            <li><a href="#">Actividades</a></li>
+            <li><a href="#">Recursos</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </section>
+
+        <p class="rights">
+          &copy; Copy right 2025 - Sociedad Cochabambina de Neurocirugía
+        </p>
+        <p class="a_stack">
+          Design: A-Stack Dev <br />(create/conect/accelerate)
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          // el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>
