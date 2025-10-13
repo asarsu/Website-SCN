@@ -163,55 +163,71 @@ body {
     section.directorio{
       padding: 1rem;
       text-align: center;
-      // background-color: ab.$celeste;
 
-      h2{
+       h2{
         font-family: "Montserrat", sans-serif;
         color: ab.$negro;
         text-shadow: 3px -1px 6px rgba(0,0,0,0.54);
         margin-bottom: 1rem;
       }
 
-      div.miembros{
+      .directorioSwiper{
+        padding-bottom: 1rem;
+        overflow: visible;
+
+        .swiper-slide{
         // display: flex;
         // flex-wrap: wrap;
         
-        article.miembro_container{
-          padding: 1rem;
-          max-width: 100%;
-          position: relative;
-          
+          article.miembro_container{
+            padding: 1rem;
+            max-width: 100%;
+            position: relative;
+
+  
           img{
             max-width: 100%;
             border-radius: 10px;
-            
+            box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+              -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+              -moz-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);          
           }
+
+          div.miembros_text{
+          
+            position: absolute;
+            top: 218px;
+            margin: 4px;
+            width: 280px;
+            background-color: ab.$naranja;
+            padding: 0.5rem;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+              -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+              -moz-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+            h3{
+              color: ab.$negro;
+              font-size: 1rem;
+              font-family: "Libre Franklin", sans-serif;
+            } 
+            p{
+              color: ab.$negro;
+              font-family: "Sarala", sans-serif;
+              line-height: 18px;
+            }
+          }
+
         }
 
-        div.miembros_text{
-          
-          position: absolute;
-          top: 218px;
-          margin: 4px;
-          width: 280px;
-          background-color: ab.$naranja;
-          padding: 0.5rem;
-          border-radius: 0 10px 10px 0;
-          box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
-            -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
-            -moz-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
-          h3{
-            color: ab.$negro;
-            font-size: 1rem;
-            font-family: "Libre Franklin", sans-serif;
-          } 
-          p{
-            color: ab.$negro;
-            font-family: "Sarala", sans-serif;
-            line-height: 18px;
-          }
-        }
+        
       }
+
+
+      }
+      
+     
+
+      
       
     }
 
@@ -222,7 +238,6 @@ body {
       justify-content: center;
       align-items: center;
       
-
       div.recursos_container{
         padding: 1rem;
         max-width: 75%;

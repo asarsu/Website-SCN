@@ -169,55 +169,71 @@
         <section class="directorio">
           <h2>Directorio Gestión 2025</h2>
 
-          <div class="miembros">
-            <article class="miembro_container">
-              <img
-                src="https://placehold.co/300?text=Foto\nPresidente"
-                alt=""
-              />
-              <div class="miembros_text">
-                <h3>Dr. Diego Fernando León</h3>
-                <p>Presidente</p>
+          <!-- Swiper -->
+          <div class="swiper directorioSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="miembro_container">
+                  <img
+                    src="https://placehold.co/300?text=Foto\nPresidente"
+                    alt=""
+                  />
+                  <div class="miembros_text">
+                    <h3>Dr. Diego Fernando León</h3>
+                    <p>Presidente</p>
+                  </div>
+                </article>
               </div>
-            </article>
 
-            <article class="miembro_container">
-              <img
-                src="https://placehold.co/300?text=Foto\nVicepresidente"
-                alt=""
-              />
-              <div class="miembros_text">
-                <h3>Dr. Armando Casas Del Bosque</h3>
-                <p>Vicepresidente</p>
+              <div class="swiper-slide">
+                <article class="miembro_container">
+                  <img
+                    src="https://placehold.co/300?text=Foto\nVicepresidente"
+                    alt=""
+                  />
+                  <div class="miembros_text">
+                    <h3>Dr. Armando Casas Del Bosque</h3>
+                    <p>Vicepresidente</p>
+                  </div>
+                </article>
               </div>
-            </article>
 
-            <article class="miembro_container">
-              <img
-                src="https://placehold.co/300?text=Foto\nSecretario"
-                alt=""
-              />
-              <div class="miembros_text">
-                <h3>Dr. Esteban Quito Gonzales</h3>
-                <p>Secrtetario</p>
+              <div class="swiper-slide">
+                <article class="miembro_container">
+                  <img
+                    src="https://placehold.co/300?text=Foto\nSecretario"
+                    alt=""
+                  />
+                  <div class="miembros_text">
+                    <h3>Dr. Esteban Quito Gonzales</h3>
+                    <p>Secrtetario</p>
+                  </div>
+                </article>
               </div>
-            </article>
 
-            <article class="miembro_container">
-              <img src="https://placehold.co/300?text=Foto\nTesorero" alt="" />
-              <div class="miembros_text">
-                <h3>Dr. Abharam Tirado Rico</h3>
-                <p>Tesorero</p>
+              <div class="swiper-slide">
+                <article class="miembro_container">
+                  <img
+                    src="https://placehold.co/300? text=Foto\nTesorero"
+                    alt=""
+                  />
+                  <div class="miembros_text">
+                    <h3>Dr. Abharam Tirado Rico</h3>
+                    <p>Tesorero</p>
+                  </div>
+                </article>
               </div>
-            </article>
 
-            <article class="miembro_container">
-              <img src="https://placehold.co/300?text=Foto\nVocal" alt="" />
-              <div class="miembros_text">
-                <h3>Dr. Susana Oria Huertas</h3>
-                <p>Vocal</p>
+              <div class="swiper-slide">
+                <article class="miembro_container">
+                  <img src="https://placehold.co/300?text=Foto\nVocal" alt="" />
+                  <div class="miembros_text">
+                    <h3>Dr. Susana Oria Huertas</h3>
+                    <p>Vocal</p>
+                  </div>
+                </article>
               </div>
-            </article>
+            </div>
           </div>
         </section>
 
@@ -290,7 +306,7 @@
           </picture>
 
           <p>email: <br /><span>contacto@sociedadneurologica.cbb.org</span></p>
-          <p>telefono: <br /><span>+591 74539874</span></p>
+          <p>teléfono: <br /><span>+591 74539874</span></p>
           <div class="rrss_container">
             <a href="#">
               <i class="bi bi-facebook"></i>
@@ -308,7 +324,7 @@
         </section>
 
         <section class="paginas">
-          <p>Páginas</p>
+          <p>Páginas:</p>
           <ul>
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Nosotros</a></li>
@@ -340,12 +356,37 @@
         effect: "coverflow",
         slidesPerView: "auto",
         coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          // el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+
+    <script>
+      var swiper = new Swiper(".directorioSwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        effect:"coverflow",
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
         loop: true,
         autoplay: {
           delay: 3000,
