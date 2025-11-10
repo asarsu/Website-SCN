@@ -1,0 +1,111 @@
+@use "../abstracts" as ab;
+@forward "../vendors/vendors";
+@use "../base";
+@use "../components" as comps;
+@use "../layout";
+@use "../themes";
+@use "../settings";
+
+main{   
+    background-color: ab.$blanco;
+}
+
+div.tituloContacto{
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+    padding: 6rem 1rem 1.5rem 1rem;
+    background: #090979;
+    background: linear-gradient(10deg, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 71%);
+
+    h1{
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        text-shadow: 0px 8px 13px rgba(0,0,0,0.46);
+        color:  ab.$blanco;
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+        text-decoration-thickness: 0.2rem;
+        text-decoration-color: ab.$naranja;
+    }
+
+   
+}
+
+section h4{
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #131457;
+    font-style: italic;
+    margin-bottom: 1rem;
+    span{
+        color: ab.$naranja;
+    }
+}
+
+.direccion{
+    padding: 3rem 2rem 1rem 2rem;
+    
+    .calle{
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        p{
+            font-family: "Sarala", sans-serif;
+            font-size: 1rem;
+            font-weight: 100;
+            color: ab.$negro;
+            text-align: justify;
+            span{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    a{
+        position: relative;
+        left: 50px;
+        display: inline-block;
+        margin-left: 1rem;
+        color: ab.$negro;
+        text-decoration: none;
+        font-family: "Libre Franklin", sans-serif;;
+        background-color: ab.$celeste;
+        padding: 1rem;
+        border-radius: 10px;
+        font-weight: 500;
+        &:hover{
+            background-color: ab.$negro;
+            color: ab.$blanco;
+        }
+    }
+}
+
+.numeros{
+    padding: 2rem 2rem 3rem 2rem;
+    h4 span{
+        color: ab.$azul;
+    }
+
+    .emailYnumero{
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        p{
+            font-family: "Sarala", sans-serif;
+            font-size: 1rem;
+            font-weight: 100;
+            color: ab.$negro;
+        }
+
+        a{
+            color: ab.$negro;
+            text-decoration: none;
+            font-family: "Libre Franklin", sans-serif;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

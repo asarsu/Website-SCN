@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- bootstrap-icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>Sociedad Cochabambina de Neurocirugía</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header_container">
+        <div class="logo_container">
+          <img src="/img/logo_dorado-removebg-preview.png" alt="isotipo_SBN" />
+          <h1>Sociedad Cochabambina <br />de Neurocirugía</h1>
+        </div>
+
+        <button class="menu_button" id="menu_button">
+          <i class="bi bi-list"></i>
+        </button>
+
+        <nav class="menu" id="menu">
+          <button class="close_button" id="close_button">
+            <i class="bi bi-x-square"></i>
+          </button>
+
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="asociados.html">Asociados</a></li>
+            <li><a href="#">Actividades</a></li>
+            <li><a href="recursos.html">Recursos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="actividadesMain">
+      <div class="tituloActividades">                  
+        <h1>Actividades</h1>             
+      </div>
+
+      <div class="actividadesContainer">
+
+        <div class="proximosEventos" id="proximosEventos">
+          <h3>Próximos Eventos<span>/</span></h3>
+          <article class="evento">
+              <img src="/img/fondo_eventos-prox.jpg" alt="" />
+              <p class="fecha_cuadro fecha_proxima">
+                29 <br /><span>OCT</span>
+              </p>
+              <div class="eventos_datos">
+                <h4>Asamblea Ordinaria Gestion 2025</h4>
+                <p>
+                  <i class="bi bi-calendar-event"></i>Fecha: 12 de diciembre de 2025
+                </p>
+                <p>
+                  <i class="bi bi-geo-alt"></i>Lugar: "El portal", centro de convenciones
+                </p>
+
+                <p>
+                  <i class="bi bi-clock"></i><strong>Hora:</strong>  19:00hrs.
+                </p>
+              </div>
+
+              <a href="#">Solicita Más Información</a>
+            </article>
+        </div>
+
+        <div class="actividadesSubtitulo animate__animated animate__backInLeft">
+          <p>Mantente al tanto de todos nuestros eventos</p>
+          <button class="openButton" onclick="document.getElementById('dialogo').open = true">Suscribirse al Newsletter</button>
+          <dialog id="dialogo">
+            <section>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quae, doloremque dolore odit illo nisi recusandae minus deserunt sint rerum optio aliquid, quaerat in eaque inventore ipsum animi cum! Qui.</p>
+            </section>
+            <button class="closeButton" onclick="document.getElementById('dialogo').close()"><i class="bi bi-x-square"></i></button>
+          </dialog>
+        </div>
+
+        <div class="actividadesPasadas">
+          <details>
+            <summary>
+               <h3 id="actividadesPasadas">Eventos Pasados <span>/</span></h3>
+            </summary>
+            <section class="sectionPasados">
+
+                <p>
+                  <a href="#">
+                  Jornada de atencion gratuita para adultos Mayores (14/05/24) <span>/</span></a>
+                </p>
+
+                <p>
+                  <a href="#">
+                  Cena de confraternizacion Miembros SCN (05/02/24) <span>/</span></a>
+                </p>
+
+                <p>
+                  <a href="#">
+                  Congreso Nacional de Neurocirugía endoscópica 2023 (09/08/2023) <span>/</span></a>
+                </p>
+               
+             
+            </section>
+          </details>
+         
+
+          
+        </div>
+        
+      </div>
+     
+    </main>
+
+    <footer>
+      <div class="footer_container">
+        <section class="contacto">
+          <!-- <picture>
+            <img src="img/logo_dorado-removebg-preview.png" alt="logo_cbnc" />
+          </picture> -->
+
+          <h4>Sociedad Cochabambina de Neurocirugía</h4>
+
+          <p>email: <br /><span>contacto@sociedadneurologica.cbb.org</span></p>
+          <p>teléfono: <br /><span>+591 74539874</span></p>
+          <div class="rrss_container">
+            <a href="#">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="#">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </section>
+
+        <section class="paginas">
+          <p>Páginas:</p>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="asociados.html">Asociados</a></li>
+            <li><a href="#">Actividades</a></li>
+            <li><a href="recursos.html">Recursos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </section>
+
+        <p class="rights">
+          &copy; Copy right 2025 - Sociedad Cochabambina de Neurocirugía
+        </p>
+        <p class="a_stack">
+          Design: A-Stack Dev <br />(create/conect/accelerate)
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        effect: "coverflow",
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        loop: true,
+        // autoplay: {
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // },
+        pagination: {
+          // el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+
+    <script>
+      var swiper = new Swiper(".directorioSwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        effect: "coverflow",
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        loop: true,
+        // autoplay: {
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // },
+        pagination: {
+          // el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>

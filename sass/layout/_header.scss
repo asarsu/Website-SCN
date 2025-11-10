@@ -1,9 +1,18 @@
 @use '../abstracts/' as ab;
 @use '../components/' as comps;
 
+html, body {
+  overflow-x: clip;
+}
+
 //header
   header {
-    div.header_container {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: white;
+     
+    div.header_container {      
       display: flex;
       // display: grid;
       // grid-template-columns: 1fr 1fr;
@@ -64,10 +73,13 @@
         button.close_button {
           display: block;
           border: none;
-          background-color: transparent;
+          background-color: ab.$blanco;
           color: ab.$negro;
-          font-size: 2rem;
+          font-size: 2.2rem;
           cursor: pointer;
+          position: absolute;
+          top: -69px;
+          right: 24px;
         }
 
         nav.menu {
@@ -88,18 +100,18 @@
             rgba(255, 255, 255, 0.71) 100%,
             rgba(184, 223, 165, 0.96) 100%
           );
-          border-radius: 0 0 8px 8px;
+          border-radius: 0 0 10px 10px;
           z-index: 2;
 
           @include ab.breakpoint(mobile-l) {
-            top: 81px;
-            left: 0;
+            top: 107px;
+            left: 171px;
             right: 0;
           }
 
           @include ab.breakpoint(mobile-m) {
-            top: 76px;
-            left: 0;
+            top: 97px;
+            left: 171px;
             right: 0;
           }
 
@@ -111,7 +123,19 @@
 
           ul {
             flex-direction: column;
-            align-items: end;
+            align-self: baseline;
+            li a{
+              font-family: "Sarala", sans-serif;
+              text-decoration: none;
+              color: ab.$negro;
+              &:hover{
+                text-decoration: underline;
+                text-decoration-color: ab.$naranja;
+                text-underline-offset: 2px;
+                text-decoration-thickness: 2px;
+              }
+
+            }
           }
         }
 
@@ -122,60 +146,5 @@
       }
     }
 
-    div.hero_container {
-      background: #F08700;
-background: linear-gradient(359deg, rgba(240, 135, 0, 1) 6%, rgba(146, 220, 229, 0.79) 40%, rgba(26, 143, 227, 1) 89%);
-      padding: 1rem 1rem;
-      display: flex;
-      gap: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 1rem;
-
-      img {
-        max-width: 70%;
-      }
-
-      div.hero_text {
-
-        p.sociedad{
-          font-family: "Montserrat", sans-serif;
-          
-          font-weight: 600;
-          color: #00072d;
-          background-image: linear-gradient(
-            45deg,
-            #00072d 33%,
-            #0a2472 66%,
-            #0e6ba8 100%
-          );
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          display: inline-block;
-          text-decoration: underline;
-          text-decoration-thickness: 1px;
-          text-decoration-color: ab.$negro;
-          text-underline-offset: 5px;
-        }
-        
-        h1 {
-          font-family: "Montserrat", sans-serif;
-          color: #00072d;
-          background-image: linear-gradient(
-            45deg,
-            #00072d 33%,
-            #0a2472 66%,
-            #0e6ba8 100%
-          );
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          display: inline-block;
-          font-size: 3rem;
-        }
-        
-      }
-    }
+   
   }

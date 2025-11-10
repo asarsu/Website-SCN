@@ -1,0 +1,211 @@
+@use "../abstracts" as ab;
+@forward "../vendors/vendors";
+@use "../base";
+@use "../components" as comps;
+@use "../layout";
+@use "../themes";
+@use "../settings";
+
+
+
+main.actividadesMain{   
+    background-color: white;
+}
+
+div.tituloActividades{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 6rem 1rem 1.5rem 1rem;
+    background: #090979;
+    background: linear-gradient(90deg, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 71%);
+    h1{
+        font-family: "Montserrat", sans-serif;
+        text-shadow: 0px 8px 13px rgba(0,0,0,0.46);
+        font-size: 1.5rem;
+        color:  ab.$blanco;
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+        text-decoration-thickness: 0.2rem;
+        text-decoration-color: ab.$naranja;
+    }
+
+   
+}
+
+div.actividadesContainer{
+    background-color: whitesmoke;
+    animation: backInLeft;
+    animation: 1s;
+
+
+    div.proximosEventos{
+    
+        h3{
+            font-family: "Libre Franklin", sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: ab.$negro;
+            font-style: italic;
+            
+            padding: 2rem 2rem 0 2rem;
+            span{
+             color: ab.$naranja;
+            } 
+        }
+
+        article.evento{
+        position: relative;
+        padding: 2rem;
+        padding-bottom: 0;
+        text-align: center;
+        
+        img{
+            border-radius: 10px;
+            width: 100%;
+            max-width: 325px;
+            box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+            -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+            -moz-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+        }
+        p.fecha_cuadro{
+          display: inline-block;
+          background-color: ab.$celeste;
+          color: ab.$negro;
+          position: relative;
+          top: 0px;
+          padding: 0.5rem;
+          position: absolute;
+          top: 188px;
+          right: 42px;
+          border-radius: 5px;
+          font-family: "Sarala", sans-serif;
+          font-size: 1rem;
+          line-height: 16px;
+          span{
+            font-size: 0.75rem;
+          }
+        }
+
+        p.fecha_cuadro{
+          background-color: ab.$celeste;
+        }
+
+        div.eventos_datos{
+          text-align: left;
+          padding: 1rem;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-top: 1rem;
+          h4{
+            font-family: "Libre Franklin", sans-serif;
+            color: ab.$negro;
+            text-decoration: underline;
+          }
+          p{
+            font-family: "Sarala", sans-serif;
+            color: ab.$negro;
+            i{
+              margin-right: 0.5rem;
+              color: ab.$negro;
+            }
+          }
+        }
+
+        a{
+            
+            @include comps.boton_1;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+      }
+    }
+    
+   
+    div.actividadesSubtitulo{
+        background-color: ab.$celeste;
+        padding: 3rem 1rem 3rem 1rem;
+        text-align: center;
+    
+        p{
+            color: ab.$negro;
+            font-family: "Montserrat", sans-serif;
+            margin: 1rem;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold;
+            // text-shadow: 3px -1px 6px rgba(0,0,0,0.54);
+        }
+
+        button.openButton{
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            background-color: ab.$naranja;
+            
+            font-family: "Libre Franklin", sans-serif;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: ab.$negro;
+            animation: shakeY;
+            animation-delay: 1s;
+            animation-duration: 2s;
+
+            &:hover{
+                background-color: ab.$negro;
+                color: ab.$blanco;
+            } 
+        }
+
+        dialog{
+            border: none;
+            background-color: ab.$blanco;
+            border-radius: 10px;
+            section{
+                padding: 1rem;
+            }            
+        }
+    }
+
+    div.actividadesPasadas{
+        
+        h3{
+            font-family: "Libre Franklin", sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: ab.$negro;
+            font-style: italic;
+            padding: 2rem 2rem 1rem 2rem;
+            span{
+                color: ab.$azul;
+            }  
+        }
+
+        details section{
+            p{
+                padding: 1rem 3rem 1rem 3rem;
+                a{
+                    text-decoration: none;
+                    font-family: "Libre Franklin", sans-serif;
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                    color: #131457;
+                    font-style: italic;
+                    span{
+                        color: ab.$azul;
+                    }
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+           
+            
+        }
+        
+        
+    }
+}

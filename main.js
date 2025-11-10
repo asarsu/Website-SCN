@@ -1,4 +1,5 @@
 import './sass/styles.scss';
+import 'animate.css';
 
 const nav = document.querySelector("#menu");
 const abrir = document.querySelector("#menu_button");
