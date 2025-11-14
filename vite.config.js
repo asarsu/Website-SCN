@@ -12,15 +12,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        // nosotros: resolve(__dirname, 'nosotros.html'),
-        // servicios: resolve(__dirname, 'servicios.html'),
-        // contacto: resolve(__dirname, 'contacto.html'),
-        // home: resolve(__dirname, 'home.html'),
-        // about: resolve(__dirname, 'about.html'),
-        // services: resolve(__dirname, 'services.html'),
-        // contact: resolve(__dirname, 'contact.html'),
-        // gracias: resolve(__dirname, 'gracias.html'),
-        // thanks: resolve(__dirname, 'thanks.html'),
+        nosotros: resolve(__dirname, 'nosotros.html'),
+        asociados: resolve(__dirname, 'asociados.html'),
+        actividades: resolve(__dirname, 'actividades.html'),
+        recursos: resolve(__dirname, 'recursos.html'),
+        contacto: resolve(__dirname, 'contacto.html'),
       },
     }
   
