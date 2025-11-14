@@ -32,11 +32,40 @@ div.tituloNosotros {
     text-underline-offset: 0.3rem;
     text-decoration-thickness: 0.2rem;
     text-decoration-color: ab.$naranja;
+
+    @include ab.breakpoint(tablet-horizontal){
+      margin-left: 2rem;
+      font-size: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    @include ab.breakpoint(tablet){
+      margin-left: 2rem;
+      font-size: 1.5rem;
+      padding-bottom: 1rem;
+    }
   }
 }
 
 div.historiaContainer {
   background-color: whitesmoke;
+
+  @include ab.breakpoint(mobile-l){
+    padding: 2rem;
+  }
+  
+  @include ab.breakpoint(tablet){
+    padding: 3rem;
+  }
+  
+  @include ab.breakpoint(tablet-horizontal){
+    padding: 3rem;
+  }
+
+  @include ab.breakpoint(laptop){
+    padding: 5rem;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -46,13 +75,45 @@ div.historiaContainer {
     background-color: ab.$celeste;
     width: 2px;
     height: 255px;
+
+    @include ab.breakpoint(mobile-m){
+      visibility: hidden;
+      
+    }
+    
+    @include ab.breakpoint(mobile-l){
+      top: 316px;
+      left: 44px;
+      height: 196px;
+    }
+    
+    @include ab.breakpoint(tablet){
+      top: 350px;
+      left: 60px;
+      height: 140px;
+    }
+    
+    @include ab.breakpoint(tablet-horizontal){
+      top: 386px;
+      left: 60px;
+      height: 206px;
+    }
+
+    @include ab.breakpoint(laptop){
+      top: 433px;
+      left: 96px;
+      height: 180px;
+    }
+
+    @include ab.breakpoint(desktop){      
+      left: 190px;     
+    }
+
+    @include ab.breakpoint(desktop-l){      
+      visibility: hidden;     
+    }
   }
 
- 
-  padding: 3rem 1rem 1rem 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
 
   h3 {
     font-size: 1rem;
@@ -61,6 +122,18 @@ div.historiaContainer {
     font-style: italic;
     span {
       color: ab.$celeste;
+    }
+
+    @include ab.breakpoint(mobile-l){
+      margin-bottom: 1rem;
+    }
+    
+    @include ab.breakpoint(tablet){
+      margin-bottom: 2rem;
+    }
+    
+    @include ab.breakpoint(tablet-horizontal){
+      font-size: 1.25rem;
     }
   }
 
@@ -71,6 +144,11 @@ div.historiaContainer {
     color: ab.$negro;
     font-family: "Sarala", sans-serif;
     text-align: justify;
+
+    @include ab.breakpoint(tablet-horizontal){
+      font-size: 1rem;
+      padding: 2rem 2rem 0 2rem;
+    }
   }
 }
 
@@ -82,6 +160,23 @@ div.valoresContainer {
   gap: 1rem;
   padding-bottom: 2rem;
 
+  @include ab.breakpoint(mobile-l){
+    padding: 2rem;
+  }
+
+  @include ab.breakpoint(tablet){
+    padding: 3rem;
+  }
+  
+  @include ab.breakpoint(tablet-horizontal){
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  @include ab.breakpoint(laptop){
+    padding: 5rem;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -90,6 +185,44 @@ div.valoresContainer {
     background-color: ab.$naranja;
     width: 2px;
     height: 350px;
+
+    
+    @include ab.breakpoint(mobile-m){
+      visibility: hidden;
+      
+    }
+    
+    @include ab.breakpoint(mobile-l){
+      top: 594px;
+      left: 44px;
+      height: 348px;
+    }
+    
+    @include ab.breakpoint(tablet){
+      top: 595px;
+      left: 60px;
+      height: 290px;
+    }
+    
+    @include ab.breakpoint(tablet-horizontal){
+      top: 666px;
+      left: 60px;
+      height: 357px;
+    }
+
+    @include ab.breakpoint(laptop){
+      top: 786px;
+      left: 96px;
+      height: 298px;
+    }
+
+    @include ab.breakpoint(desktop){      
+      left: 190px;     
+    }
+
+    @include ab.breakpoint(desktop-l){      
+      visibility: hidden;     
+    }
   }
 
   h3 {
@@ -100,26 +233,51 @@ div.valoresContainer {
     span {
       color: ab.$naranja;
     }
+
+    @include ab.breakpoint(tablet){
+      margin-bottom: 1rem;
+    }
+
+    @include ab.breakpoint(tablet-horizontal){
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
   }
 }
 
 div.valores {
+
+  
   p {
     padding: 0 2rem;
     font-size: 0.75rem;
     color: ab.$negro;
     font-family: "Sarala", sans-serif;
     text-align: justify;
+
+    @include ab.breakpoint(tablet-horizontal){
+      font-size: 1rem;
+    }
+
+    
   }
 
   ul {
     margin-left: 3rem;
     list-style: square;
 
+    @include ab.breakpoint(tablet-horizontal){
+      padding-bottom: 1rem;
+    }
+
     li {
       color: ab.$negro;
       font-family: "Sarala", sans-serif;
       font-size: 0.75rem;
+
+      @include ab.breakpoint(tablet-horizontal){
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -132,5 +290,9 @@ div.misionVision {
     color: ab.$negro;
     font-family: "Sarala", sans-serif;
     text-align: justify;
+
+    @include ab.breakpoint(tablet-horizontal){
+      font-size: 1rem;
+    }
   }
 }

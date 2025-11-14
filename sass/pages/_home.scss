@@ -13,6 +13,12 @@ body {
   margin: 0;
   padding: 0;
   
+  @include ab.breakpoint(desktop){
+    margin-left: 6rem;
+    margin-right: 6rem;
+    background-color: rgba(0, 0, 0, 0.801);
+    max-width: 87%;
+  }
 
   //header --> layout/header
    
@@ -30,11 +36,21 @@ body {
       align-items: center;
       margin-bottom: 1rem;
 
+      @include ab.breakpoint(tablet-horizontal){
+        padding-top: 3rem;
+      }
+
       img {
         max-width: 70%;
       }
 
       div.hero_text {
+
+        @include ab.breakpoint(tablet-horizontal){
+          display: flex;
+          flex-direction: column;
+          padding: 3rem;
+        }
 
         p.sociedad{
           font-family: "Montserrat", sans-serif;
@@ -78,10 +94,31 @@ body {
     
     div.main_container{
        padding: 0rem;
+
+        // @include ab.breakpoint(tablet-horizontal){
+        //   padding: 2rem;
+        // }
     }
    
     section.presentacion{
       padding: 1rem;
+
+      @include ab.breakpoint(tablet){
+        padding-left: 8rem;
+        padding-right: 8rem;
+      } 
+      
+      @include ab.breakpoint(tablet-horizontal){
+          padding-left: 14rem;
+          padding-right: 14rem;
+       }
+
+        @include ab.breakpoint(laptop){
+          padding-left: 25rem;
+          padding-right: 25rem;
+          margin-left: 3rem;
+          margin-right: 3rem;
+        }
 
       a{
         font-family: "Sarala", sans-serif;
@@ -111,6 +148,10 @@ body {
         background-image: url(/img/red_neuronal-ilum.jpeg);
         background-blend-mode: multiply;
         background-size: auto;
+
+         @include ab.breakpoint(tablet-horizontal){
+          padding: 2rem;
+         }
         
 
         div.presentacion_titulo{
@@ -158,6 +199,21 @@ body {
       border-top: 1px solid rgba(128, 128, 128, 0.589);
       border-bottom: 1px solid rgba(128, 128, 128, 0.589);
       margin-bottom: 1rem;
+
+      @include ab.breakpoint(tablet){
+        padding-left: 4rem;
+        padding-right: 4rem;
+       } 
+      
+      @include ab.breakpoint(tablet-horizontal){
+        padding-left: 4rem;
+        padding-right: 4rem;
+       }
+
+       @include ab.breakpoint(laptop){
+        padding-left: 6rem;
+        padding-right: 6rem;
+       }
       
       h3{
         font-size: 1.5rem;
@@ -166,6 +222,11 @@ body {
         font-family: "Libre Franklin", sans-serif;
         color: ab.$negro;
         text-shadow: 3px -1px 6px rgba(0,0,0,0.54);
+
+         @include ab.breakpoint(tablet-horizontal){
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+         }
       }
 
       #eventos_pasados_title{
@@ -175,6 +236,28 @@ body {
       article.evento{
         position: relative;
         margin-bottom: 1rem;
+
+         
+        @include ab.breakpoint(tablet){
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          background-color: white;
+          border-radius: 0 10px 10px 0;
+
+          margin-bottom: 3rem;
+         }
+        
+        @include ab.breakpoint(tablet-horizontal){
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+
+          background-color: white;
+          border-radius: 0 10px 10px 0;
+
+          margin-bottom: 3rem;
+         }
         
         img{
           border-radius: 10px;
@@ -182,6 +265,11 @@ body {
           box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
         -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
         -moz-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+
+           @include ab.breakpoint(tablet-horizontal){
+            border-radius: 10px 0 0 10px;
+           }
+
         }
         p.fecha_cuadro{
           display: inline-block;
@@ -200,15 +288,39 @@ body {
           span{
             font-size: 0.75rem;
           }
+
+          @include ab.breakpoint(tablet-horizontal){
+            visibility: hidden;
+          }
+
+          @include ab.breakpoint(tablet){
+            visibility: hidden;
+          }
+
+          @include ab.breakpoint(mobile-l){
+            top: 165px;
+            right: 45px;
+          }
         }
 
         p.fecha_pasada{
           background-color: ab.$naranja;
+
+          @include ab.breakpoint(mobile-l){
+            top: 157px;
+            right: 45px;
+          }
         }
 
         div.eventos_datos{
           text-align: left;
           padding: 0.5rem;
+
+          @include ab.breakpoint(mobile-l){
+            padding-left: 3rem;
+            padding-right: 3rem;
+          }
+
           h4{
             font-family: "Libre Franklin", sans-serif;
             color: ab.$negro;
@@ -244,11 +356,127 @@ body {
         color: ab.$negro;
         text-shadow: 3px -1px 6px rgba(0,0,0,0.54);
         margin-bottom: 1rem;
+
+        @include ab.breakpoint(tablet-horizontal){
+          margin-bottom: 3rem;
+        }
+
+        @include ab.breakpoint(tablet){
+          margin-bottom: 3rem;
+        }
+
+        
       }
 
+      .directorioStatic{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 3rem;
+
+        @include ab.breakpoint(laptop){
+          padding-left: 6rem;
+          padding-right: 6rem;
+        }
+
+        // @include ab.breakpoint(tablet){
+        //   display: inherit;
+        // }
+
+        @include ab.breakpoint(mobile-l){
+          display: none;
+        }
+
+        @include ab.breakpoint(mobile-m){
+          display: none;
+        }
+
+        // @include ab.breakpoint(mobile-s){
+        //   display: none;
+        // }
+
+        article img{
+          width: 60%;
+          border-radius: 10px;
+          box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+        -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+        -moz-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+        }
+
+        .miembros_text{
+          background-color: ab.$naranja;
+          border-radius: 10px;
+          width: 75%;
+          position: relative;
+          top: -60px;
+          left: 34px;
+          padding: 0.2rem;
+
+
+          @include ab.breakpoint(tablet){
+            width: 74%;            
+            left: 31px;
+            top: -52px;
+          }
+
+          @include ab.breakpoint(tablet-horizontal){
+            width: 69%;            
+            left: 52px;
+          }
+          
+          @include ab.breakpoint(laptop){
+            width: 65%;            
+            left: 64px;
+          }
+
+          @include ab.breakpoint(desktop){
+            width: 65%;            
+            left: 60px;
+          }
+
+          @include ab.breakpoint(desktop-l){
+            width: 65%;            
+            left: 82px;
+          }
+
+          h3{
+            font-family: "Libre Franklin", sans-serif;
+            color: ab.$negro;
+
+            @include ab.breakpoint(tablet){
+              font-size: 0.80rem;
+            }
+            
+          }
+
+          p{
+            font-family: "Sarala", sans-serif;
+            color: ab.$negro;
+            
+            @include ab.breakpoint(tablet){
+              font-size: 0.80rem;
+            }
+          }
+
+
+          
+        }
+      }
+
+
+      //swipwer desde 425px para abajo
       .directorioSwiper{
         padding-bottom: 1rem;
         overflow: visible;
+
+         @include ab.breakpoint(tablet-horizontal){
+          display: none;
+         }
+
+         @include ab.breakpoint(tablet){
+          display: none;
+         }
 
         .swiper-slide{
         // display: flex;
@@ -313,6 +541,24 @@ body {
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+
+      @include ab.breakpoint(tablet){
+        background-color: white;
+        flex-wrap: nowrap;
+        gap: 1rem;
+      }
+      
+      @include ab.breakpoint(tablet-horizontal){        
+        flex-wrap: nowrap;
+        gap: 1rem;
+        background-color: white;
+      }
+      
+      @include ab.breakpoint(laptop){
+        padding-left: 4rem;
+        padding-right: 4rem;
+        gap: 4rem;
+      }
       
       div.recursos_container{
         padding: 1rem;
@@ -327,6 +573,18 @@ body {
         a{
           text-decoration: none;
           padding: 0.5rem;
+
+          @include ab.breakpoint(tablet){
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;           
+          }
+          
+          @include ab.breakpoint(tablet-horizontal){
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;           
+          }
           
           i{
             color: ab.$azul;
@@ -336,7 +594,14 @@ body {
             color: ab.$naranja;
           }
           p{
-            color: ab.$negro; 
+            color: ab.$negro;
+            
+          }
+
+          #comiteIconoHome{
+            @include ab.breakpoint(laptop){
+              margin-top: 1rem;
+            }
           }
         }
       }
@@ -345,11 +610,20 @@ body {
 
     section.sponsors{
       margin-top: 2rem;
+
+      @include ab.breakpoint(tablet-horizontal){
+        margin-top: 0;
+      }
+
       p{
         text-align: center;
         color: gray;
         font-family: "Sarala", sans-serif;
         margin: 2rem;
+
+        @include ab.breakpoint(tablet-horizontal){
+          font-size: 1.5rem;
+        }
       }
       
       div.sponsors_container{

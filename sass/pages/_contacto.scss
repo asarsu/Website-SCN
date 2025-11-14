@@ -18,7 +18,7 @@ div.tituloContacto{
     background: #090979;
     background: linear-gradient(10deg, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 71%);
 
-    h1{
+    h2{
         font-family: "Montserrat", sans-serif;
         font-size: 1.5rem;
         text-shadow: 0px 8px 13px rgba(0,0,0,0.46);
@@ -27,6 +27,12 @@ div.tituloContacto{
         text-underline-offset: 0.5rem;
         text-decoration-thickness: 0.2rem;
         text-decoration-color: ab.$naranja;
+
+        @include ab.breakpoint(tablet-horizontal){
+            margin-left: 2rem;
+            font-size: 2rem;
+            padding-bottom: 2rem;    
+        }
     }
 
    
@@ -42,10 +48,25 @@ section h4{
     span{
         color: ab.$naranja;
     }
+
+    @include ab.breakpoint(tablet-horizontal){
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .direccion{
     padding: 3rem 2rem 1rem 2rem;
+
+    @include ab.breakpoint(tablet-horizontal){
+        padding-left: 4rem;            
+        padding-right: 4rem;
+    }
+
+    @include ab.breakpoint(laptop){
+        padding-left: 5rem;            
+        padding-right: 5rem;
+    }
     
     .calle{
         margin-left: 1rem;
@@ -74,15 +95,32 @@ section h4{
         padding: 1rem;
         border-radius: 10px;
         font-weight: 500;
+        
         &:hover{
             background-color: ab.$negro;
             color: ab.$blanco;
+        }
+
+        @include ab.breakpoint(tablet-horizontal){
+            margin-left: 0;
+            margin-top: 2rem;
         }
     }
 }
 
 .numeros{
     padding: 2rem 2rem 3rem 2rem;
+
+    @include ab.breakpoint(tablet-horizontal){
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    @include ab.breakpoint(laptop){
+        padding-left: 5rem;            
+        padding-right: 5rem;
+    }
+    
     h4 span{
         color: ab.$azul;
     }

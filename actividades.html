@@ -45,89 +45,105 @@
     </header>
 
     <main class="actividadesMain">
-      <div class="tituloActividades">                  
-        <h1>Actividades</h1>             
+      <div class="tituloActividades">
+        <h2>Actividades</h2>
       </div>
 
       <div class="actividadesContainer">
-
         <div class="proximosEventos" id="proximosEventos">
           <h3>Próximos Eventos<span>/</span></h3>
           <article class="evento">
-              <img src="/img/fondo_eventos-prox.jpg" alt="" />
-              <p class="fecha_cuadro fecha_proxima">
-                29 <br /><span>OCT</span>
+            <img src="/img/fondo_eventos-prox.jpg" alt="" />
+            <p class="fecha_cuadro fecha_proxima">29 <br /><span>OCT</span></p>
+            <div class="eventos_datos">
+              <h4>Asamblea Ordinaria Gestion 2025</h4>
+              <p>
+                <i class="bi bi-calendar-event"></i>Fecha: 12 de diciembre de
+                2025
               </p>
-              <div class="eventos_datos">
-                <h4>Asamblea Ordinaria Gestion 2025</h4>
-                <p>
-                  <i class="bi bi-calendar-event"></i>Fecha: 12 de diciembre de 2025
-                </p>
-                <p>
-                  <i class="bi bi-geo-alt"></i>Lugar: "El portal", centro de convenciones
-                </p>
+              <p>
+                <i class="bi bi-geo-alt"></i>Lugar: "El portal", centro de
+                convenciones
+              </p>
 
-                <p>
-                  <i class="bi bi-clock"></i><strong>Hora:</strong>  19:00hrs.
-                </p>
-              </div>
+              <p><i class="bi bi-clock"></i><strong>Hora:</strong> 19:00hrs.</p>
+            </div>
+          </article>
 
-              <a href="#">Solicita Más Información</a>
-            </article>
+          <article class="evento">
+            <img src="/img/fondo_eventos-prox.jpg" alt="" />
+            <p class="fecha_cuadro fecha_proxima">05 <br /><span>FEB</span></p>
+            <div class="eventos_datos">
+              <h4>1er Congreso Nacional de Neurocirugia Pediátrica</h4>
+              <p>
+                <i class="bi bi-calendar-event"></i>Fecha: 12 de diciembre de
+                2025
+              </p>
+              <p>
+                <i class="bi bi-geo-alt"></i>Lugar: "El portal", centro de
+                convenciones
+              </p>
+              <p><i class="bi bi-clock"></i><strong>Hora:</strong> 19:00hrs.</p>
+            </div>
+          </article>
+
+          <a href="#">Solicita Más Información</a>
         </div>
 
         <div class="actividadesSubtitulo animate__animated animate__backInLeft">
-          <p>Mantente al tanto de todos nuestros eventos</p>
-          <button class="openButton" onclick="document.getElementById('dialogo').open = true">Suscribirse al Newsletter</button>
-          <dialog id="dialogo">
-            <section>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quae, doloremque dolore odit illo nisi recusandae minus deserunt sint rerum optio aliquid, quaerat in eaque inventore ipsum animi cum! Qui.</p>
-            </section>
-            <button class="closeButton" onclick="document.getElementById('dialogo').close()"><i class="bi bi-x-square"></i></button>
-          </dialog>
+          <p>
+            Suscríbete a nuestro "boletín de noticias" y mantente al tanto de
+            todas las actividades de la Asociación
+          </p>
+          <div class="suscripcion">
+            <form action="post">
+              <input
+                type="email"
+                name="email"
+                id="mail"
+                placeholder="ejemplo@email.com"
+                required
+              />
+              <input type="submit" name="submit" id="submit" />
+            </form>
+          </div>
         </div>
 
         <div class="actividadesPasadas">
           <details>
             <summary>
-               <h3 id="actividadesPasadas">Eventos Pasados <span>/</span></h3>
+              <h3 id="actividadesPasadas">Eventos Pasados <span>/</span></h3>
             </summary>
             <section class="sectionPasados">
+              <p>
+                <a href="#">
+                  Jornada de atencion gratuita para adultos Mayores (14/05/24)
+                  <span>/</span></a
+                >
+              </p>
 
-                <p>
-                  <a href="#">
-                  Jornada de atencion gratuita para adultos Mayores (14/05/24) <span>/</span></a>
-                </p>
+              <p>
+                <a href="#">
+                  Cena de confraternizacion Miembros SCN (05/02/24)
+                  <span>/</span></a
+                >
+              </p>
 
-                <p>
-                  <a href="#">
-                  Cena de confraternizacion Miembros SCN (05/02/24) <span>/</span></a>
-                </p>
-
-                <p>
-                  <a href="#">
-                  Congreso Nacional de Neurocirugía endoscópica 2023 (09/08/2023) <span>/</span></a>
-                </p>
-               
-             
+              <p>
+                <a href="#">
+                  Congreso Nacional de Neurocirugía endoscópica 2023
+                  (09/08/2023) <span>/</span></a
+                >
+              </p>
             </section>
           </details>
-         
-
-          
         </div>
-        
       </div>
-     
     </main>
 
     <footer>
       <div class="footer_container">
         <section class="contacto">
-          <!-- <picture>
-            <img src="img/logo_dorado-removebg-preview.png" alt="logo_cbnc" />
-          </picture> -->
-
           <h4>Sociedad Cochabambina de Neurocirugía</h4>
 
           <p>email: <br /><span>contacto@sociedadneurologica.cbb.org</span></p>

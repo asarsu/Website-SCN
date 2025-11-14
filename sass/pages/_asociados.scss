@@ -27,6 +27,12 @@ div.tituloAsociados{
         text-underline-offset: 0.3rem;
         text-decoration-thickness: 0.2rem;
         text-decoration-color: ab.$naranja;
+
+        @include ab.breakpoint(tablet-horizontal){
+            margin-left: 2rem;
+            font-size: 2rem;
+            padding-bottom: 2rem;    
+        }
     }    
 }
 
@@ -35,6 +41,14 @@ div.asociadosContainer{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    @include ab.breakpoint(tablet-horizontal){
+        padding-left: 3rem;
+    }
+
+    @include ab.breakpoint(laptop){
+        padding-left: 5rem;
+    }
 }
 
 details{
@@ -54,13 +68,20 @@ details{
             span{
                 color: ab.$celeste;
             }
+
+            @include ab.breakpoint(tablet-horizontal){
+                font-size: 1.25rem;
+            }
         }
 
         p{
             font-size: 0.75rem;        
             color: ab.$negro;
             font-family: "Sarala", sans-serif;
-            // text-align: justify;
+            
+            @include ab.breakpoint(tablet-horizontal){
+                font-size: 1rem;
+            }
         }
     }
 
@@ -80,11 +101,22 @@ details{
             -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
             -moz-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
 
+            @include ab.breakpoint(tablet-horizontal){
+                max-width: 55%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2rem;
+            }
+
             div{
                 padding: 1rem;
                 font-family: "Montserrat", sans-serif;
                 font-size: 0.75rem;
                 color: ab.$negro;
+
+                @include ab.breakpoint(tablet-horizontal){
+                    font-size: 1rem;
+                }
             }
             .div1 { 
                 grid-area: 1 / 1 / 2 / 2;
@@ -142,9 +174,21 @@ div.comiteContainer{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    @include ab.breakpoint(tablet-horizontal){
+        padding-left: 3rem;
+    }
+
+    @include ab.breakpoint(laptop){
+        padding-left: 5rem;
+    }
 }
 
 details.comiteDetails{
+
+    @include ab.breakpoint(tablet-horizontal){
+        margin-top: 1rem;
+    }
 
     summary span{
         color: ab.$naranja;
@@ -163,7 +207,11 @@ details.comiteDetails{
                font-style: italic;
                span{
                 color: ab.$naranja;
-               } 
+               }
+
+               @include ab.breakpoint(tablet-horizontal){
+                font-size: 1rem;
+               }
             }
 
             div.subdivComite{
@@ -175,8 +223,14 @@ details.comiteDetails{
                 
 
                 box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
-            -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
-            -moz-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+                -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+                -moz-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+
+                @include ab.breakpoint(tablet-horizontal){
+                    max-width: 45%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
                 
                 
                 div{
@@ -184,6 +238,10 @@ details.comiteDetails{
                     font-family: "Montserrat", sans-serif;
                     font-size: 0.75rem;
                     color: ab.$negro;
+                    
+                    @include ab.breakpoint(tablet-horizontal){
+                        font-size: 1rem;
+                    }
                 }
 
                 div.div0{
@@ -207,6 +265,16 @@ details.comiteDetails{
 
 div.estatutosContainer{
     padding: 1rem 2rem 1rem 2rem;
+
+    @include ab.breakpoint(tablet-horizontal){
+        padding-left: 3rem;
+    }
+
+
+    @include ab.breakpoint(laptop){
+        padding-left: 5rem;
+    }
+
     a{
         text-decoration: none;
         font-family: "Libre Franklin", sans-serif;
@@ -220,6 +288,10 @@ div.estatutosContainer{
 
         &:hover{
             text-decoration: underline;
+        }
+
+        @include ab.breakpoint(tablet-horizontal){
+            font-size: 1.25rem;
         }
     }
 
@@ -238,7 +310,16 @@ div.estatutosContainer{
 
 div.miembrosContainer{
     padding: 1rem 2rem 3rem 2rem;
+
+    @include ab.breakpoint(tablet-horizontal){
+        padding-left: 3rem;
+    }
     
+
+    @include ab.breakpoint(laptop){
+        padding-left: 5rem;
+    }
+
     div.tablaMiembros{
         margin-top: 1rem;
         padding:  0;
@@ -251,8 +332,17 @@ div.miembrosContainer{
             -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
             -moz-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
 
+        @include ab.breakpoint(tablet-horizontal){
+                max-width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2rem;
+            }
+
         table{
             border-collapse: collapse;
+
+            
             
             thead{
                 background-color: ab.$azul;
@@ -267,6 +357,10 @@ div.miembrosContainer{
                 white-space: nowrap;
                 font-family: "Montserrat", sans-serif;
                 color: ab.$negro;
+
+                @include ab.breakpoint(tablet-horizontal){
+                    font-size: 1rem;
+                }
             }
 
             th{

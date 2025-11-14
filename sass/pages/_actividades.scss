@@ -19,7 +19,7 @@ div.tituloActividades{
     padding: 6rem 1rem 1.5rem 1rem;
     background: #090979;
     background: linear-gradient(90deg, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 71%);
-    h1{
+    h2{
         font-family: "Montserrat", sans-serif;
         text-shadow: 0px 8px 13px rgba(0,0,0,0.46);
         font-size: 1.5rem;
@@ -28,6 +28,13 @@ div.tituloActividades{
         text-underline-offset: 0.5rem;
         text-decoration-thickness: 0.2rem;
         text-decoration-color: ab.$naranja;
+
+        @include ab.breakpoint(tablet-horizontal){
+            margin-left: 2rem;
+            font-size: 2rem;
+            padding-bottom: 2rem;
+    
+        }
     }
 
    
@@ -35,11 +42,18 @@ div.tituloActividades{
 
 div.actividadesContainer{
     background-color: whitesmoke;
-    animation: backInLeft;
-    animation: 1s;
-
-
+    
     div.proximosEventos{
+
+        @include ab.breakpoint(tablet-horizontal){
+            padding-left: 3rem;
+            padding-right: 3rem; 
+        }
+
+        @include ab.breakpoint(laptop){
+            padding-left: 5rem;
+            padding-right: 5rem;
+    }
     
         h3{
             font-family: "Libre Franklin", sans-serif;
@@ -47,18 +61,35 @@ div.actividadesContainer{
             font-weight: 700;
             color: ab.$negro;
             font-style: italic;
-            
             padding: 2rem 2rem 0 2rem;
             span{
              color: ab.$naranja;
-            } 
+            }
+
+            @include ab.breakpoint(tablet-horizontal){
+                font-size: 1.25rem;
+                padding-top: 3rem;
+            }
         }
 
         article.evento{
-        position: relative;
-        padding: 2rem;
-        padding-bottom: 0;
-        text-align: center;
+            position: relative;
+            padding: 2rem;
+            padding-bottom: 0;
+            text-align: center;
+
+            @include ab.breakpoint(tablet-horizontal){
+                display: flex;
+                flex-direction: row;
+                padding: 0;
+                background-color: white;
+                margin: 2rem;
+                border-radius: 10px;
+                align-items: center;
+                box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+                -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+                -moz-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);                    
+            }
         
         img{
             border-radius: 10px;
@@ -67,6 +98,11 @@ div.actividadesContainer{
             box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
             -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
             -moz-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+
+            @include ab.breakpoint(tablet-horizontal){
+                box-shadow: none;
+                border-radius: 10px 0 0 10px;
+            }
         }
         p.fecha_cuadro{
           display: inline-block;
@@ -84,6 +120,10 @@ div.actividadesContainer{
           line-height: 16px;
           span{
             font-size: 0.75rem;
+          }
+
+          @include ab.breakpoint(tablet-horizontal){
+            visibility: hidden;
           }
         }
 
@@ -111,14 +151,43 @@ div.actividadesContainer{
               color: ab.$negro;
             }
           }
+
+          @include ab.breakpoint(tablet){
+            flex-wrap: nowrap;
+            flex-direction: column;
+            margin-left: 2rem;
+          }
         }
 
-        a{
-            
-            @include comps.boton_1;
-            padding-left: 1rem;
-            padding-right: 1rem;
+      }
+
+      a{
+        @include comps.boton_1;
+
+        
+        @include ab.breakpoint(mobile-l){
+           display: inline-block;
+            position: relative;
+            left: 55px;        
         }
+
+        @include ab.breakpoint(mobile-m){
+           display: inline-block;
+            position: relative;
+            left: 30px;        
+        }
+        
+        @include ab.breakpoint(tablet-horizontal){
+            display: inline-block;
+            position: relative;
+            left: 580px;            
+        }
+
+         @include ab.breakpoint(laptop){
+           
+            left: 830px;            
+        }
+
 
       }
     }
@@ -128,6 +197,11 @@ div.actividadesContainer{
         background-color: ab.$celeste;
         padding: 3rem 1rem 3rem 1rem;
         text-align: center;
+
+        @include ab.breakpoint(tablet-horizontal){
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
     
         p{
             color: ab.$negro;
@@ -136,36 +210,37 @@ div.actividadesContainer{
             text-align: center;
             font-size: 1rem;
             font-weight: bold;
-            // text-shadow: 3px -1px 6px rgba(0,0,0,0.54);
-        }
 
-        button.openButton{
-            padding: 1rem;
-            border: none;
-            border-radius: 10px;
-            background-color: ab.$naranja;
+            @include ab.breakpoint(tablet-horizontal){
+                display: inline-block;
+                max-width: 50%;
+                margin-bottom: 2rem;
+            }
             
-            font-family: "Libre Franklin", sans-serif;
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: ab.$negro;
-            animation: shakeY;
-            animation-delay: 1s;
-            animation-duration: 2s;
-
-            &:hover{
-                background-color: ab.$negro;
-                color: ab.$blanco;
-            } 
         }
 
-        dialog{
-            border: none;
-            background-color: ab.$blanco;
+        form{
+            outline: none;
+            background-color: white;
+            display: inline-block;
             border-radius: 10px;
-            section{
-                padding: 1rem;
-            }            
+            input{
+                padding: 0.75rem;
+                border: none;
+                
+            }
+
+            #mail{
+                border-radius: 10px 0 0 10px;
+            }
+
+            #submit{
+                background-color: ab.$naranja;
+                border-radius: 0px 10px 10px 0;
+                font-family: "Libre Franklin", sans-serif;
+                color: ab.$negro;
+                font-weight: 500;
+            }
         }
     }
 
@@ -180,10 +255,22 @@ div.actividadesContainer{
             padding: 2rem 2rem 1rem 2rem;
             span{
                 color: ab.$azul;
-            }  
+            }
+
+            @include ab.breakpoint(tablet-horizontal){
+                font-size: 1.25rem;
+                padding-left: 5rem;
+                padding-right: 5rem;
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
         }
 
         details section{
+
+            @include ab.breakpoint(tablet-horizontal){
+                padding: 0 4rem 3rem 4rem ;
+            }
             p{
                 padding: 1rem 3rem 1rem 3rem;
                 a{

@@ -24,37 +24,37 @@
   }
   
   @else if $bp == tablet {
-    @media (max-width: variables.$bp-tablet) {
+    @media (min-width: variables.$bp-tablet) {
       @content;
     }
   }
 
   @else if $bp == tablet-horizontal {
-    @media (max-width: variables.$bp-tablet-horizontal) {
+    @media (min-width: variables.$bp-tablet-horizontal) {
       @content;
     }
   }
 
  @else if $bp == laptop {
-    @media (max-width: variables.$bp-laptop) {
+    @media (min-width: variables.$bp-laptop) {
       @content;
     }
   }
 
   @else if $bp == desktop {
-    @media (max-width: variables.$bp-desktop) {
+    @media (min-width: variables.$bp-desktop) {
       @content;
     }
   }
 
   @else if $bp == desktop-m {
-    @media (max-width: variables.$bp-desktop-m) {
+    @media (min-width: variables.$bp-desktop-m) {
       @content;
     }
   }
 
   @else if $bp == desktop-l {
-    @media (max-width: variables.$bp-desktop-l) {
+    @media (min-width: variables.$bp-desktop-l) {
       @content;
     }
   }

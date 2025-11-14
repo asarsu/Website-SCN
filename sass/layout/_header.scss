@@ -11,14 +11,20 @@ html, body {
     top: 0;
     z-index: 3;
     background-color: white;
+    box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+        -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+        -moz-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
      
     div.header_container {      
       display: flex;
-      // display: grid;
-      // grid-template-columns: 1fr 1fr;
       align-items: center;
       gap: 2rem;
       padding: 1rem 1rem;
+
+      @include ab.breakpoint(tablet-horizontal){
+        padding: 2rem 2rem;
+      }
+
       div.logo_container {
         display: flex;
         gap: 1rem;
@@ -26,11 +32,27 @@ html, body {
         align-items: center;
         img {
           max-width: 25%;
+
+          @include ab.breakpoint(tablet-horizontal){
+            max-width: 20%;
+          }
+
+          @include ab.breakpoint(tablet){
+            max-width: 12%;
+          }
         }
         h1 {
           color: ab.$negro;
           font-family: "Montserrat", sans-serif;
           font-size: 0.75rem;
+          
+          @include ab.breakpoint(tablet-horizontal){
+            font-size: 1.3rem;
+          }
+
+          @include ab.breakpoint(tablet){
+            font-size: 1.3rem;
+          }
           
         }
       }
@@ -50,18 +72,32 @@ html, body {
         display: none;
       }
 
-      nav #menu {
+      nav.menu {
         ul {
           display: flex;
           flex-direction: row;
           gap: 2rem;
           justify-content: space-evenly;
+          
           li a {
             font-family: "Sarala", sans-serif;
             text-decoration: none;
             color: ab.$negro;
+
+             &:hover{
+                text-decoration: underline;
+                text-decoration-color: ab.$naranja;
+                text-underline-offset: 2px;
+                text-decoration-thickness: 2px;
+              }
           }
+
+          @include ab.breakpoint(laptop){
+            gap: 4rem;            
+          }
+
         }
+
       }
 
       //responsive para el navbar 768px
@@ -103,6 +139,8 @@ html, body {
           border-radius: 0 0 10px 10px;
           z-index: 2;
 
+          
+          
           @include ab.breakpoint(mobile-l) {
             top: 107px;
             left: 171px;
@@ -116,14 +154,46 @@ html, body {
           }
 
           @include ab.breakpoint(mobile-s) {
-            top: 76px;
-            left: 0px;
+            top: 87px;
+            left: 160px;
             right: 0;
           }
+
+          @include ab.breakpoint(tablet) {
+            top: 107px;
+            left: 0;
+            right: 0;
+            
+          }
+
+        }
+
+        nav.visible {
+          opacity: 1;
+          visibility: visible;
 
           ul {
             flex-direction: column;
             align-self: baseline;
+
+            @include ab.breakpoint(mobile-s){
+              gap: 0.5rem;
+            }
+
+            @include ab.breakpoint(mobile-m){
+              gap: 0.5rem;
+            }
+
+            @include ab.breakpoint(mobile-l){
+              gap: 0.5rem;
+            }
+
+            @include ab.breakpoint(tablet){
+              gap: 3rem;
+              flex-direction: row;
+              padding-left: 3rem;
+            }
+
             li a{
               font-family: "Sarala", sans-serif;
               text-decoration: none;
@@ -137,11 +207,7 @@ html, body {
 
             }
           }
-        }
-
-        nav.visible {
-          opacity: 1;
-          visibility: visible;
+          
         }
       }
     }
