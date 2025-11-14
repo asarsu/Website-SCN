@@ -33,18 +33,18 @@ html, body {
         img {
           max-width: 25%;
 
-          @include ab.breakpoint(tablet-horizontal){
-            max-width: 20%;
-          }
-
           @include ab.breakpoint(tablet){
             max-width: 12%;
+          }
+
+          @include ab.breakpoint(tablet-horizontal){
+            max-width: 20%;
           }
         }
         h1 {
           color: ab.$negro;
           font-family: "Montserrat", sans-serif;
-          font-size: 0.75rem;
+          font-size: 1rem;
           
           @include ab.breakpoint(tablet-horizontal){
             font-size: 1.3rem;

@@ -53,6 +53,11 @@ div.historiaContainer {
   @include ab.breakpoint(mobile-l){
     padding: 2rem;
   }
+
+  @include ab.breakpoint(mobile-s){
+    padding: 0.5rem;
+  }
+
   
   @include ab.breakpoint(tablet){
     padding: 3rem;
@@ -76,15 +81,24 @@ div.historiaContainer {
     width: 2px;
     height: 255px;
 
-    @include ab.breakpoint(mobile-m){
-      visibility: hidden;
-      
-    }
+   
     
     @include ab.breakpoint(mobile-l){
       top: 316px;
       left: 44px;
       height: 196px;
+    }
+
+    @include ab.breakpoint(mobile-m){
+      top: 303px;
+      left: 44px;
+      height: 238px;      
+    }
+
+    @include ab.breakpoint(mobile-s){
+      top: 268px;
+      left: 20px;
+      height: 253px;      
     }
     
     @include ab.breakpoint(tablet){
@@ -164,6 +178,10 @@ div.valoresContainer {
     padding: 2rem;
   }
 
+  @include ab.breakpoint(mobile-s){
+    padding: 0.5rem;
+  }
+
   @include ab.breakpoint(tablet){
     padding: 3rem;
   }
@@ -187,15 +205,24 @@ div.valoresContainer {
     height: 350px;
 
     
-    @include ab.breakpoint(mobile-m){
-      visibility: hidden;
-      
-    }
+    
     
     @include ab.breakpoint(mobile-l){
       top: 594px;
       left: 44px;
       height: 348px;
+    }
+
+    @include ab.breakpoint(mobile-m){
+      top: 624px;
+      left: 44px;
+      height: 425px;      
+    }
+
+     @include ab.breakpoint(mobile-s){
+      top: 561px;
+      left: 20px;
+      height: 425px;      
     }
     
     @include ab.breakpoint(tablet){

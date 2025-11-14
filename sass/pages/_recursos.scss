@@ -222,6 +222,16 @@ section{
                 }
                 
             }
+
+            #enlaceSBN{
+                @include ab.breakpoint(mobile-l){
+                    margin-left: 0.8rem;
+                }
+
+                 @include ab.breakpoint(mobile-m){
+                    margin-left: 0rem;
+                }
+            }
         }
 
 

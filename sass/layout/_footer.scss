@@ -6,10 +6,40 @@ footer {
   background-color: ab.$azul;
   padding: 1rem;
 
+  @include ab.breakpoint(mobile-s){
+    padding: 0;
+  }
+
+  h4{
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 1.25rem;
+      color: ab.$blanco;
+      font-weight: 700;
+      font-family: "Montserrat", sans-serif;
+      text-shadow: 0px 8px 13px rgba(0,0,0,0.46);
+
+      @include ab.breakpoint(mobile-s){
+        padding-top: 1rem;
+        margin-top: 0;
+      }
+    }
+
   div.footer_container {
+    
+    @include ab.breakpoint(tablet){
+      display: flex;
+      justify-content: space-around;
+    }
 
     section.contacto {
       padding: 1rem;
+
+      @include ab.breakpoint(mobile-s){
+        padding-left: 0;
+        padding-right: 0;
+      }
+
       picture {
         display: flex;
         justify-content: center;
@@ -20,16 +50,7 @@ footer {
         }
       }
 
-      h4{
-        text-align: center;
-        margin: 2rem 0;
-        font-size: 1.25rem;
-        color: ab.$blanco;
-        font-weight: 700;
-        font-family: "Montserrat", sans-serif;
-        text-shadow: 0px 8px 13px rgba(0,0,0,0.46);
-      }
-
+     
       p {
         color: ab.$blanco;
         text-align: center;
@@ -70,12 +91,22 @@ footer {
             text-align: center;
             font-family: "Libre Franklin", sans-serif;
             margin-bottom: 0.5rem;
+
+            @include ab.breakpoint(tablet){
+              position: relative;
+              right: 14px;
+            }
         }
         ul{
             display: flex;
             gap: 0.5rem;
             flex-wrap: wrap;
             justify-content: center;
+
+            @include ab.breakpoint(tablet){
+              flex-direction: column;
+            }
+
             li a{
                 color: ab.$celeste;
                 font-family: "Libre Franklin", sans-serif;
@@ -87,11 +118,13 @@ footer {
         }
     }
 
-    p.rights{
+  }
+
+   p.rights{
         color: ab.$blanco;
         font-size: 0.65rem;
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
         font-family: "Libre Franklin", sans-serif;
         color: ab.$negro;
     }
@@ -103,5 +136,5 @@ footer {
         font-size: 0.6rem;
         text-align: center;
     }
-  }
+
 }

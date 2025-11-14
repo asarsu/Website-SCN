@@ -58,6 +58,8 @@ section h4{
 .direccion{
     padding: 3rem 2rem 1rem 2rem;
 
+    
+    
     @include ab.breakpoint(tablet-horizontal){
         padding-left: 4rem;            
         padding-right: 4rem;
@@ -67,10 +69,17 @@ section h4{
         padding-left: 5rem;            
         padding-right: 5rem;
     }
+
+    
     
     .calle{
         margin-left: 1rem;
         margin-bottom: 1rem;
+
+        @include ab.breakpoint(mobile-s){
+        margin-left: 0;
+    }
+
         p{
             font-family: "Sarala", sans-serif;
             font-size: 1rem;
@@ -105,6 +114,10 @@ section h4{
             margin-left: 0;
             margin-top: 2rem;
         }
+
+        @include ab.breakpoint(mobile-s){
+            left: 18px;
+        }
     }
 }
 
@@ -130,6 +143,11 @@ section h4{
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+
+        @include ab.breakpoint(mobile-s){
+            margin-left: 0;
+        }
+
         p{
             font-family: "Sarala", sans-serif;
             font-size: 1rem;

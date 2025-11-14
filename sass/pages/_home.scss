@@ -46,10 +46,20 @@ body {
 
       div.hero_text {
 
+        @include ab.breakpoint(tablet){
+           display: flex;
+          flex-direction: column;
+         
+        }
+        
         @include ab.breakpoint(tablet-horizontal){
           display: flex;
           flex-direction: column;
           padding: 3rem;
+        }
+
+        @include ab.breakpoint(mobile-s){
+          text-align: center;
         }
 
         p.sociedad{
@@ -87,6 +97,10 @@ body {
           -webkit-text-fill-color: transparent;
           display: inline-block;
           font-size: 3rem;
+
+          @include ab.breakpoint(mobile-s){
+            font-size: 2rem;            
+          }
         }
         
       }
@@ -109,16 +123,22 @@ body {
       } 
       
       @include ab.breakpoint(tablet-horizontal){
-          padding-left: 14rem;
-          padding-right: 14rem;
-       }
+        padding-left: 14rem;
+        padding-right: 14rem;
+      }
 
-        @include ab.breakpoint(laptop){
-          padding-left: 25rem;
-          padding-right: 25rem;
-          margin-left: 3rem;
-          margin-right: 3rem;
-        }
+      @include ab.breakpoint(laptop){
+        padding-left: 25rem;
+        padding-right: 25rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+      }
+
+      .swiper-pagination{
+        position: relative;
+        top: 0;
+
+      }
 
       a{
         font-family: "Sarala", sans-serif;
@@ -226,7 +246,7 @@ body {
          @include ab.breakpoint(tablet-horizontal){
           margin-top: 2rem;
           margin-bottom: 2rem;
-         }
+         }         
       }
 
       #eventos_pasados_title{
@@ -263,12 +283,16 @@ body {
           border-radius: 10px;
           max-width: 325px;
           box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
-        -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
-        -moz-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+          -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+          -moz-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
 
-           @include ab.breakpoint(tablet-horizontal){
+          @include ab.breakpoint(tablet-horizontal){
             border-radius: 10px 0 0 10px;
-           }
+          }
+
+          @include ab.breakpoint(mobile-s){
+            width: 100%;
+          }
 
         }
         p.fecha_cuadro{
@@ -301,6 +325,16 @@ body {
             top: 165px;
             right: 45px;
           }
+
+          @include ab.breakpoint(mobile-m){
+            top: 166px;
+            right: 19px;
+          }
+
+          @include ab.breakpoint(mobile-s){
+            top: 140px;
+            right: 10px;
+          }
         }
 
         p.fecha_pasada{
@@ -310,15 +344,30 @@ body {
             top: 157px;
             right: 45px;
           }
+
+          @include ab.breakpoint(mobile-m){
+            top: 157px;
+            right: 19px;
+          }
+
+          @include ab.breakpoint(mobile-s){
+            top: 132px;
+            right: 10px;
+          }
         }
 
         div.eventos_datos{
-          text-align: left;
+          text-align: center;
           padding: 0.5rem;
 
           @include ab.breakpoint(mobile-l){
             padding-left: 3rem;
             padding-right: 3rem;
+          }
+
+          @include ab.breakpoint(mobile-m){
+            padding-left: 1rem;
+            padding-right: 1rem;
           }
 
           h4{
@@ -509,6 +558,21 @@ body {
             box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
               -webkit-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
               -moz-box-shadow: 1px 18px 25px -7px rgba(0,7,45,0.6);
+
+            
+            @include ab.breakpoint(mobile-l){
+              top: 300px;
+            }
+
+            @include ab.breakpoint(mobile-m){
+              top: 255px;
+            }
+
+            @include ab.breakpoint(mobile-s){
+              top: 207px;
+              width: 90%;
+            }
+
             h3{
               color: ab.$negro;
               font-size: 1rem;
@@ -528,11 +592,12 @@ body {
 
 
       }
-      
-     
 
-      
-      
+      .swiper-pagination-directorio{
+        @include ab.breakpoint(tablet){
+          visibility: hidden;
+        }
+      } 
     }
 
     section.recursos{
@@ -542,6 +607,10 @@ body {
       justify-content: center;
       align-items: center;
 
+      @include ab.breakpoint(mobile-l){
+        background-color: white;
+      }
+      
       @include ab.breakpoint(tablet){
         background-color: white;
         flex-wrap: nowrap;
