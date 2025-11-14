@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- bootstrap-icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>Sociedad Cochabambina de Neurocirugía</title>
+    <script type="module" crossorigin src="/soc-web-page/assets/main-D0TYPaLx.js"></script>
+    <link rel="stylesheet" crossorigin href="/soc-web-page/assets/main-BcH9_B6u.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="header_container">
+        <div class="logo_container">
+          <img src="/soc-web-page/assets/logo_dorado-removebg-preview-DfOhxUim.png" alt="isotipo_SBN" />
+          <h1>Sociedad Cochabambina <br />de Neurocirugía</h1>
+        </div>
+
+        <button class="menu_button" id="menu_button">
+          <i class="bi bi-list"></i>
+        </button>
+
+        <nav class="menu" id="menu">
+          <button class="close_button" id="close_button">
+            <i class="bi bi-x-square"></i>
+          </button>
+
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="asociados.html">Asociados</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="#">Recursos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="recursosMain">
+      <div class="tituloRecursos">              
+        <h2>Recursos</h2>                   
+      </div>
+
+      <div class="recursosContainer">
+
+        <section class="recursosExternos">
+
+          <h2>Recursos externos <span>/</span></h2>
+
+          <div class="recursos">
+            <article>
+              <img src="/soc-web-page/assets/revista-flanc-300-DEHku_VP.jpg" alt="">
+              <a href="https://flancneurocirugia.org/revista/" target="_blank">Revista FLANC <span>/</span></a>
+            </article>
+
+            <article>
+              <img src="/soc-web-page/assets/congresos-300-CuIH2dEC.jpg" alt="">
+              <a href="https://flancneurocirugia.org/congresos/" target="_blank">Congresos Internacionales <span>/</span></a>
+            </article>
+          </div>
+          
+        </section>
+
+        <section class="websrelacionadas">
+          <h2>Sitios Web de intéres <span>/</span></h2>
+
+          <div class="webs">
+            <article>
+              <img src="/soc-web-page/assets/sbn-300-BYsZExBY.png" alt="">
+              <a id="enlaceSBN" href="#">SBN <span>/</span></a>
+              <p id="enlaceSBN">Sociedad Boliviana de Neurocirugía</p>
+            </article>
+
+            <article>
+              <img src="/soc-web-page/assets/flanc-300-CtAjHKTU.png" alt="">
+              <a href="#">FLANC <span>/</span></a>
+              <p>Federación Latinoamericana de Sociedades de Neurocirugía</p>
+            </article>
+
+            <article>
+              <img src="/soc-web-page/assets/wfns-300-BIm4m_Yw.jpg" alt="">
+              <a href="#">WFNS <span>/</span></a>
+              <p>World Federation Of Neurocirgical Societies</p>
+            </article>
+          </div>
+          
+        </section>
+      </div>
+      
+    </main>
+
+   <footer>
+
+      <h4>Sociedad Cochabambina de Neurocirugía</h4>
+
+      <div class="footer_container">
+
+        <section class="contacto">
+          
+          <p>email: <br /><span>contacto@neurocirugiacochabamba.com</span></p>
+          <p>teléfono: <br /><span>+591 74539874</span></p>
+          <div class="rrss_container">
+            <a href="#">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="#">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </section>
+
+        <section class="paginas">
+          <p>Páginas:</p>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="asociados.html">Asociados</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="recursos.html">Recursos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </section>
+
+      </div>
+
+      <p class="rights">
+          &copy; Copy right 2025 - Sociedad Cochabambina de Neurocirugía
+        </p>
+        <p class="a_stack">
+          Powered By: A-Stack Dev <br />(create/conect/accelerate)
+        </p>
+
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        effect: "coverflow",
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        loop: true,
+        // autoplay: {
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // },
+        pagination: {
+          // el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+
+    <script>
+      var swiper = new Swiper(".directorioSwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        effect: "coverflow",
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        loop: true,
+        // autoplay: {
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // },
+        pagination: {
+          // el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>
