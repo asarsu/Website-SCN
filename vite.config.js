@@ -5,7 +5,7 @@ import { resolve } from 'path'
 export default defineConfig({
  
 
-  base: '/soc-web-page/',
+  base: '/Website-SCN/',
  
 
   build: {
