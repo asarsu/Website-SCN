@@ -1,8 +1,8 @@
-## ConquerBlocks/moduloCSS/Proyecto_entregable_5-5
-### Proyecto Final: 
-Trans Global S.R.L. Web page:
 
-https://asarsu.github.io/HTML-CSS-Proyecto_Final_TransGlobal_web/
+### Proyecto: 
+Sociedad Cochabambina de Neurocirugia Web page:
+
+https://asarsu.github.io/Website-SCN/
 
 Proyecto responsive creado en **HTML/CSS** usando **vite**, **sass**, **javascript**.
 
